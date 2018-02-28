@@ -5,7 +5,7 @@ export default class Clock extends Component {
     super(props);
 
     this.state = {
-      bert: "February 16, 2018 22:00",
+      // date: this.props.date,
       days: 0,
       hours: 0,
       minutes: 0,
@@ -14,24 +14,26 @@ export default class Clock extends Component {
     // console.log(this.props);
   }
 
-  getTimeUntil(bert) {
-    const time = Date.parse(bert) - Date.now();
+  getTimeUntil(selDate) {
+    const date = this.props.date;
+    console.log('date', date)
+    const time = Date.parse(date) - Date.now();
     if (time < 0) return;
     // const milliseconds = Math.floor(time % 1000);
     const seconds = Math.floor((time / 1000) % 60);
     const minutes = Math.floor((time / 1000 / 60) % 60);
     const hours = Math.floor((time / 1000 / 60 / 60) % 24);
-    const days = Math.floor((time / 1000 / 60 / 60 / 24) % 7);
+    const days = Math.floor((time / 1000 / 60 / 60 / 24));
     // console.log(days, 'days', hours, 'hours', minutes, 'minutes', seconds, 'seconds');
     this.setState({ days, hours, minutes, seconds });
   }
 
-  componentWillMount() {
-    this.getTimeUntil(this.state.bert);
-  }
+  // componentWillMount() {
+  //   this.getTimeUntil(this.state.event);
+  // }
 
   componentDidMount() {
-    setInterval(() => this.getTimeUntil(this.state.bert), 1000);
+    setInterval(() => this.getTimeUntil(this.state.event), 1000);
   }
 
   render() {
