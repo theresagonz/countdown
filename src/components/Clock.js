@@ -67,7 +67,7 @@ export default class Clock extends Component {
           <span className="label">Seconds</span>
         </div>
         <div className="description clock">
-          of {this.props.awesomeThing}
+          since {this.props.awesomeThing}
         </div>
       </div>
     );

@@ -40,14 +40,14 @@ class App extends Component {
             </header>
           </div>
         </div>
-        <div id="right-box">
+        {/* <div id="right-box">
           <div className="vert-center">
             <div id="prompt" className="vert-center">
               How long 'til the next?
             </div>
             <Form callbackFromParent={this.callback} />
           </div>
-        </div>
+        </div> */}
       </div>
     );
   }
