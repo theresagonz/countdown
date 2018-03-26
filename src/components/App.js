@@ -11,7 +11,7 @@ class App extends Component {
     super(props);
     this.state = {
       awesomeThing: 'Bert',
-      date: '03/31/2018 9:30:00'
+      date: '03/31/2018 19:30:00'
       // (new Date().getFullYear() + 1).toString()
     };
   }
@@ -40,14 +40,14 @@ class App extends Component {
             </header>
           </div>
         </div>
-        {/* <div id="right-box">
+        <div id="right-box">
           <div className="vert-center">
             <div id="prompt" className="vert-center">
               How long 'til the next?
             </div>
             <Form callbackFromParent={this.callback} />
           </div>
-        </div> */}
+        </div>
       </div>
     );
   }
