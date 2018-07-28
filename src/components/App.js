@@ -11,7 +11,7 @@ class App extends Component {
     super(props);
     this.state = {
       awesomeThing: 'Bert',
-      date: '03/31/2018 19:30:00'
+      date: '07/29/2018 18:00:00'
       // (new Date().getFullYear() + 1).toString()
     };
   }
